@@ -16,3 +16,12 @@ let mySnakeGrowth = [
     {x: 160, y: 200}
 ];
 
+/*
+The y - y-coordinate for all parts is always 200. The x
+x-coordinate is at decrements of 10 to represent 
+different parts of the snake’s body. The very first 
+coordinate represents the snake’s head.
+*/
+
+
+

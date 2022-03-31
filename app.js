@@ -34,8 +34,6 @@ const snakeDesign = (snakeBody) => {
 }
 
 // function that will show the snake on board with a for each iteration.
-function drawSnake() 
-{  
-    mySnakeGrowth.forEach(snakeDesign);
-}
+const drawSnake = () => mySnakeGrowth.forEach(snakeDesign);
+
 

@@ -60,6 +60,9 @@ document.addEventListener(
     // making the canvas
     // getting the canvas 2d content, which means that it will be drawn into a 2D space.
     displayBoardEffect = BoardForTheSnake.getContext("2d");
+
+    // now I will create a function that will update the board and the HTML is going to draw
+    reformToUpdate();
   },
   false
 );

@@ -1,7 +1,3 @@
-// making the canvas
-//getting the canvas 2d content, which means that it will be drawn into a 2D space.
-const displayBoardEffect = gameCanvas.getContext("2d");
-
 //creating coordinates for as an object that will define the length of the snake.
 // x and y coordinates.
 // creating the snake in middle of canvas.
@@ -46,9 +42,9 @@ let boardColumns = 20;
 
 // then creating variable for the board and one variable for the context.
 
-let BoardForTheSnake;
+let BoardForTheSnake; // the variable for the board of the snake game I'm making
 
-let context; // this is the drawing object.
+let displayBoardEffect; // this is the drawing object.
 
 // so when the page loads then I will create an event handler which will load up the game board this will equal the function.
 document.addEventListener(
@@ -58,6 +54,12 @@ document.addEventListener(
     // DOM for picking up the board for the snake game.
     BoardForTheSnake = document.querySelector("#game-board");
     // setting the height to the board rows times by the blocksizing of the board.
+    BoardForTheSnake.height = rows * blockSizing;
+    // then a width that will be board coloumns times the block sizing.
+    BoardForTheSnake.width = boardColumns * blockSizing;
+    // making the canvas
+    // getting the canvas 2d content, which means that it will be drawn into a 2D space.
+    displayBoardEffect = BoardForTheSnake.getContext("2d");
   },
   false
 );

@@ -50,11 +50,14 @@ let BoardForTheSnake;
 
 let context; // this is the drawing object.
 
+// so when the page loads then I will create an event handler which will load up the game board this will equal the function.
 document.addEventListener(
   "DOMContentLoaded",
   function () {
+    // picking out the board.
     // DOM for picking up the board for the snake game.
     BoardForTheSnake = document.querySelector("#game-board");
+    // setting the height to the board rows times by the blocksizing of the board.
   },
   false
 );

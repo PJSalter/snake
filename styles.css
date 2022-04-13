@@ -2,13 +2,14 @@
 Beginning of CSS Styling 
  */
 
-* {
+/* * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
+} */
 body {
   background-color: #d4f0f7;
+  text-align: center;
 }
 /* .game-container{
      /* background-color: red; */

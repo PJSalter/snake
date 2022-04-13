@@ -69,7 +69,7 @@ window.addEventListener(
 
 const reformToUpdate = () => {
   // this will change the color with the fill style to purple.
-  displayBoardEffect.fillstyle = "#b19cd9";
+  displayBoardEffect.fillStyle = "#b19cd9";
 
   // starting from the corner of the canvas.
   // then filling a width and height of 500. because 25 times 25 equals 100.

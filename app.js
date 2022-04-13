@@ -37,3 +37,13 @@ const snakeDesign = (snakeBody) => {
 const drawSnake = () => mySnakeGrowth.forEach(snakeDesign);
 
 
+// now I will create the board for my snake game
+// I will be multiplying the coordinates by the box size.
+// there will be a block size of 25
+let blockSizing = 25;
+// I will need a particular set of rows 
+let boardRows = 20;
+// I will need a particular set of coloumn
+
+
+

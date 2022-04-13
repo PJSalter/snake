@@ -1,5 +1,3 @@
-// DOM for picking up the board for the snake game.
-const BoardForTheSnake = document.querySelector(".game-container");
 // making the canvas
 //getting the canvas 2d content, which means that it will be drawn into a 2D space.
 const displayBoardEffect = gameCanvas.getContext("2d");
@@ -48,6 +46,15 @@ let boardColumns = 20;
 
 // then creating variable for the board and one variable for the context.
 
-let snakesNestBoard;
+let BoardForTheSnake;
 
 let context; // this is the drawing object.
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
+    // DOM for picking up the board for the snake game.
+    BoardForTheSnake = document.querySelector("#game-board");
+  },
+  false
+);

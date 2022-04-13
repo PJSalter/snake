@@ -40,7 +40,14 @@ const drawSnake = () => mySnakeGrowth.forEach(snakeDesign);
 // I will be multiplying the coordinates by the box size.
 // there will be a block size of 25
 let blockSizing = 25;
+// rows and coloumns 20 x 20
 // I will need a particular set of rows
 let boardRows = 20;
 // I will need a particular set of coloumn
 let boardColumns = 20;
+
+// then creating variable for the board and one variable for the context.
+
+let snakesNestBoard;
+
+let context;

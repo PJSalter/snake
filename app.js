@@ -66,3 +66,18 @@ document.addEventListener(
   },
   false
 );
+
+const reformToUpdate = () => {
+  // this will change the color with the fill style to purple.
+  displayBoardEffect.fillstyle = "purple";
+
+  // starting from the corner of the canvas.
+  // then filling a width and height of 500. because 25 times 25 equals 100.
+  // this will make the whole area purple.
+  displayBoardEffect.fillRect(
+    0,
+    0,
+    BoardForTheSnake.width,
+    BoardForTheSnake.height
+  );
+};

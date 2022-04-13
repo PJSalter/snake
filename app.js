@@ -50,4 +50,4 @@ let boardColumns = 20;
 
 let snakesNestBoard;
 
-let context;
+let context; // this is the drawing object.

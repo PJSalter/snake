@@ -2,21 +2,22 @@
 Beginning of CSS Styling 
  */
 
-*{
-     box-sizing: border-box;
-     padding: 0;
-     margin: 0;
+/* * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+} */
+body {
+  background-color: #d4f0f7;
+  text-align: center;
 }
-body{
-     background-color: #d4f0f7;
-}
-.game-container{
+/* .game-container{
      /* background-color: red; */
-     margin-left: auto;
+/* margin-left: auto;
      margin-right: auto;
-     max-width: 20rem;
-} 
-#game-board{
-     width: 400px;
-     height: 400px;
- }
+     max-width: 20rem; */
+/* }  */
+/* #game-board{ */
+/* width: 400px;
+     height: 400px; */
+/* } */

@@ -42,9 +42,20 @@ let boardColumns = 20;
 
 // then creating variable for the board and one variable for the context.
 
-let BoardForTheSnake; // the variable for the board of the snake game I'm making
+let boardForTheSnake; // the variable for the board of the snake game I'm making
 
 let displayBoardEffect; // this is the drawing object.
+
+// designing the snake
+// starting with creating the snakes head.
+// the x coordinate
+// equalling with the block sizing and times that by seven.
+// so initially what I am creating is coordinates for the snake to start on block 7 by 7
+// multiplying the x and y coordinates by the block sizing.
+// so that the snake reaches the correct pixel region within the page.
+let xCorSnake = blockSizing * 7;
+// y coordinate
+let yCorSnake = blockSizing * 7;
 
 // so when the page loads then I will create an event handler which will load up the game board this will equal the function.
 window.addEventListener(
@@ -52,14 +63,14 @@ window.addEventListener(
   function () {
     // picking out the board.
     // DOM for picking up the board for the snake game.
-    BoardForTheSnake = document.getElementById("game-board");
+    boardForTheSnake = document.getElementById("game-board");
     // setting the height to the board rows times by the blocksizing of the board.
-    BoardForTheSnake.height = boardRows * blockSizing;
+    boardForTheSnake.height = boardRows * blockSizing;
     // then a width that will be board coloumns times the block sizing.
-    BoardForTheSnake.width = boardColumns * blockSizing;
+    boardForTheSnake.width = boardColumns * blockSizing;
     // making the canvas
     // getting the canvas 2d content, which means that it will be drawn into a 2D space.
-    displayBoardEffect = BoardForTheSnake.getContext("2d");
+    displayBoardEffect = boardForTheSnake.getContext("2d");
 
     // now I will create a function that will update the board and the HTML is going to draw
     reformToUpdate();
@@ -77,7 +88,23 @@ const reformToUpdate = () => {
   displayBoardEffect.fillRect(
     0,
     0,
-    BoardForTheSnake.width,
-    BoardForTheSnake.height
+    boardForTheSnake.width,
+    boardForTheSnake.height
   );
+
+  // creating the colour of the snake. with a dark pastel green hex code.
+  // and using a neon pastel pink also to trend with a fade.
+  // styling in JavaScript of linear Gradient for the beginning snake head
+  let snakeBlend = displayBoardEffect.createLinearGradient(65, 16, 5, 100);
+  snakeBlend.addColorStop(0, "#03c03c");
+  snakeBlend.addColorStop(1, "#FF44CC");
+
+  // fill the style with the linear gradient
+  displayBoardEffect.fillStyle = snakeBlend;
+  /* The fillRect() method draws a filled rectangle whose starting point is 
+  at (x, y) and whose size is specified by width and height. The fill style 
+  is determined by the current fillStyle attribute.
+  */
+  // x and y coordinates, also the width and the height.
+  displayBoardEffect.fillRect(xCorSnake, yCorSnake, blockSizing, blockSizing);
 };

@@ -122,4 +122,6 @@ const reformToUpdate = () => {
 
   // fill the style with the linear gradient to make the food look yummy.
   displayBoardEffect.fillStyle = snakeFoodMix;
+
+  displayBoardEffect.fillRect(yumYumX, foodYumY, blockSizing, blockSizing);
 };

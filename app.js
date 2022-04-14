@@ -35,7 +35,7 @@ coordinate represents the snake’s head.
 // the x coordinate
 // equalling with the block sizing and times that by five.
 let xCorSnake = blockSizing * 5;
-
+let yCorSnake = blockSizing * 5;
 // now I will create the board for my snake game
 // I will be multiplying the coordinates by the box size.
 // there will be a block size of 25

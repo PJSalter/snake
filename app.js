@@ -98,4 +98,6 @@ const reformToUpdate = () => {
   at (x, y) and whose size is specified by width and height. The fill style 
   is determined by the current fillStyle attribute.
   */
+  // x and y coordinates, also the width and the height.
+  displayBoardEffect.fillRect(xCorSnake, yCorSnake, blockSizing, blockSizing);
 };

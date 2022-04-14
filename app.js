@@ -57,6 +57,11 @@ let xCorSnake = blockSizing * 7;
 // y coordinate
 let yCorSnake = blockSizing * 7;
 
+// x and y coordinates for creating the food, similar to creating the snake head.
+let yumYumX = blockSizing * 12;
+// y coordinate of food
+let foodYumY = blockSizing * 12;
+
 // so when the page loads then I will create an event handler which will load up the game board this will equal the function.
 window.addEventListener(
   "DOMContentLoaded",
@@ -107,4 +112,16 @@ const reformToUpdate = () => {
   */
   // x and y coordinates, also the width and the height.
   displayBoardEffect.fillRect(xCorSnake, yCorSnake, blockSizing, blockSizing);
+  // the snake is on coordinates 7 by 7 within the block.
+
+  // snake food styling.
+  // linear gradient styling for food using two different colours.
+  let snakeFoodMix = displayBoardEffect.createLinearGradient(85, 5, 20, 65);
+  snakeFoodMix.addColorStop(0, "#035bff");
+  snakeFoodMix.addColorStop(1, "#FFFF00");
+
+  // fill the style with the linear gradient to make the food look yummy.
+  displayBoardEffect.fillStyle = snakeFoodMix;
+
+  displayBoardEffect.fillRect(yumYumX, foodYumY, blockSizing, blockSizing);
 };

@@ -30,6 +30,12 @@ coordinate represents the snake’s head.
 // // function that will show the snake on board with a for each iteration.
 // const drawSnake = () => mySnakeGrowth.forEach(snakeDesign);
 
+// designing the snake
+// starting with creating the snakes head.
+// the x coordinate
+// equalling with the block sizing and times that by five.
+let xCorSnake = blockSizing * 5;
+
 // now I will create the board for my snake game
 // I will be multiplying the coordinates by the box size.
 // there will be a block size of 25
@@ -42,7 +48,7 @@ let boardColumns = 20;
 
 // then creating variable for the board and one variable for the context.
 
-let BoardForTheSnake; // the variable for the board of the snake game I'm making
+let boardForTheSnake; // the variable for the board of the snake game I'm making
 
 let displayBoardEffect; // this is the drawing object.
 
@@ -52,14 +58,14 @@ window.addEventListener(
   function () {
     // picking out the board.
     // DOM for picking up the board for the snake game.
-    BoardForTheSnake = document.getElementById("game-board");
+    boardForTheSnake = document.getElementById("game-board");
     // setting the height to the board rows times by the blocksizing of the board.
-    BoardForTheSnake.height = boardRows * blockSizing;
+    boardForTheSnake.height = boardRows * blockSizing;
     // then a width that will be board coloumns times the block sizing.
-    BoardForTheSnake.width = boardColumns * blockSizing;
+    boardForTheSnake.width = boardColumns * blockSizing;
     // making the canvas
     // getting the canvas 2d content, which means that it will be drawn into a 2D space.
-    displayBoardEffect = BoardForTheSnake.getContext("2d");
+    displayBoardEffect = boardForTheSnake.getContext("2d");
 
     // now I will create a function that will update the board and the HTML is going to draw
     reformToUpdate();
@@ -77,7 +83,7 @@ const reformToUpdate = () => {
   displayBoardEffect.fillRect(
     0,
     0,
-    BoardForTheSnake.width,
-    BoardForTheSnake.height
+    boardForTheSnake.width,
+    boardForTheSnake.height
   );
 };

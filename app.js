@@ -92,9 +92,15 @@ const reformToUpdate = () => {
     boardForTheSnake.height
   );
 
-  // within this function I will update the styling of the snake.
   // creating the colour of the snake. with a dark pastel green hex code.
-  displayBoardEffect.fillStyle = "#03c03c";
+  // and using a neon pastel pink also to trend with a fade.
+  // styling in JavaScript of linear Gradient for the beginning snake head
+  let snakeBlend = displayBoardEffect.createLinearGradient(65, 16, 5, 100);
+  snakeBlend.addColorStop(0, "#03c03c");
+  snakeBlend.addColorStop(1, "#FF44CC");
+
+  // fill the style with the linear gradient
+  displayBoardEffect.fillStyle = snakeBlend;
   /* The fillRect() method draws a filled rectangle whose starting point is 
   at (x, y) and whose size is specified by width and height. The fill style 
   is determined by the current fillStyle attribute.

@@ -116,8 +116,8 @@ const reformToUpdate = () => {
 
   // snake food styling.
   // linear gradient styling for food using two different colours.
-  let snakeFoodMix = displayBoardEffect.createLinearGradient(65, 16, 5, 100);
-  snakeFoodMix.addColorStop(0, "#1F51FF");
+  let snakeFoodMix = displayBoardEffect.createLinearGradient(85, 5, 20, 65);
+  snakeFoodMix.addColorStop(0, "#035bff");
   snakeFoodMix.addColorStop(1, "#FFFF00");
 
   // fill the style with the linear gradient to make the food look yummy.

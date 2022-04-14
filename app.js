@@ -107,4 +107,5 @@ const reformToUpdate = () => {
   */
   // x and y coordinates, also the width and the height.
   displayBoardEffect.fillRect(xCorSnake, yCorSnake, blockSizing, blockSizing);
+  // the snake is on coordinates 7 by 7 within the block.
 };

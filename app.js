@@ -94,4 +94,8 @@ const reformToUpdate = () => {
   // within this function I will update the styling of the snake.
   // creating the colour of the snake. with a dark pastel green hex code.
   displayBoardEffect.fillStyle = "#03c03c";
+  /* The fillRect() method draws a filled rectangle whose starting point is 
+  at (x, y) and whose size is specified by width and height. The fill style 
+  is determined by the current fillStyle attribute.
+  */
 };

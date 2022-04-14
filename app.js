@@ -30,16 +30,6 @@ coordinate represents the snake’s head.
 // // function that will show the snake on board with a for each iteration.
 // const drawSnake = () => mySnakeGrowth.forEach(snakeDesign);
 
-// designing the snake
-// starting with creating the snakes head.
-// the x coordinate
-// equalling with the block sizing and times that by seven.
-// so initially what I am creating is coordinates for the snake to start on block 7 by 7
-// multiplying the x and y coordinates by the block sizing.
-// so that the snake reaches the correct pixel region within the page.
-let xCorSnake = blockSizing * 7;
-// y coordinate
-let yCorSnake = blockSizing * 7;
 // now I will create the board for my snake game
 // I will be multiplying the coordinates by the box size.
 // there will be a block size of 25
@@ -55,6 +45,17 @@ let boardColumns = 20;
 let boardForTheSnake; // the variable for the board of the snake game I'm making
 
 let displayBoardEffect; // this is the drawing object.
+
+// designing the snake
+// starting with creating the snakes head.
+// the x coordinate
+// equalling with the block sizing and times that by seven.
+// so initially what I am creating is coordinates for the snake to start on block 7 by 7
+// multiplying the x and y coordinates by the block sizing.
+// so that the snake reaches the correct pixel region within the page.
+let xCorSnake = blockSizing * 7;
+// y coordinate
+let yCorSnake = blockSizing * 7;
 
 // so when the page loads then I will create an event handler which will load up the game board this will equal the function.
 window.addEventListener(

@@ -35,6 +35,8 @@ coordinate represents the snake’s head.
 // the x coordinate
 // equalling with the block sizing and times that by seven.
 // so initially what I am creating is coordinates for the snake to start on block 7 by 7
+// multiplying the x and y coordinates by the block sizing.
+// so that the snake reaches the correct pixel region within the page.
 let xCorSnake = blockSizing * 7;
 // y coordinate
 let yCorSnake = blockSizing * 7;
@@ -88,4 +90,8 @@ const reformToUpdate = () => {
     boardForTheSnake.width,
     boardForTheSnake.height
   );
+
+  // within this function I will update the styling of the snake.
+  // creating the colour of the snake. with a dark pastel green hex code.
+  displayBoardEffect.fillStyle = "#03c03c";
 };

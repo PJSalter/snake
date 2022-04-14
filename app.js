@@ -113,4 +113,13 @@ const reformToUpdate = () => {
   // x and y coordinates, also the width and the height.
   displayBoardEffect.fillRect(xCorSnake, yCorSnake, blockSizing, blockSizing);
   // the snake is on coordinates 7 by 7 within the block.
+
+  // snake food styling.
+  // linear gradient styling for food using two different colours.
+  let snakeFoodMix = displayBoardEffect.createLinearGradient(65, 16, 5, 100);
+  snakeFoodMix.addColorStop(0, "#1F51FF");
+  snakeFoodMix.addColorStop(1, "#FFFF00");
+
+  // fill the style with the linear gradient to make the food look yummy.
+  displayBoardEffect.fillStyle = snakeFoodMix;
 };

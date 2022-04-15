@@ -58,8 +58,11 @@ let xCorSnake = blockSizing * 7;
 let yCorSnake = blockSizing * 7;
 
 // x and y coordinates for creating the food, similar to creating the snake head.
+// let yumYumX = blockSizing * 12;
+// // y coordinate of food
+// let foodYumY = blockSizing * 12;
+
 let yumYumX;
-// y coordinate of food
 let foodYumY;
 
 // so when the page loads then I will create an event handler which will load up the game board this will equal the function.
@@ -77,10 +80,11 @@ window.addEventListener(
     // getting the canvas 2d content, which means that it will be drawn into a 2D space.
     displayBoardEffect = boardForTheSnake.getContext("2d");
 
-    // now I will create a function that will update the board and the HTML is going to draw
-    reformToUpdate();
     // once page is refreshed the food will be located in a different position each and every time.
     yummyFoodPosition();
+
+    // now I will create a function that will update the board and the HTML is going to draw
+    reformToUpdate();
   },
   false
 );
@@ -130,7 +134,6 @@ const reformToUpdate = () => {
 
 // A function to randomise the food in x and y coordinates.
 // placing the food in any loacation.
-
 const yummyFoodPosition = () => {
   // Math.random() method brings up a number between 0-1 and then multiplying this by the number of coloumns and rows from 0-19.9999 then multiplying by the blocksizing which is 25.
   // Math.floor() method brings its to the highest or lowest whole integer place.

@@ -132,6 +132,8 @@ const reformToUpdate = () => {
 // placing the food in any loacation.
 
 const yummyFoodPosition = () => {
+  // Math.random() method brings up a number between 0-1 and then multiplying this by the number of coloumns and rows from 0-19.9999 then multiplying by the blocksizing which is 25.
+  // Math.floor() method brings its to the highest or lowest whole integer place.
   // setting the yumyum x to methods of Math.floor() and Math.random.
   // to randomise the x coordinates. times its coloumns and the sizing of the block.
   yumYumX = Math.floor(Math.random() * boardColumns) * blockSizing;

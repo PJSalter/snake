@@ -128,3 +128,5 @@ const reformToUpdate = () => {
 
 // A function to randomise the food in x and y coordinates.
 // placing the food in any loacation.
+
+const yummyFoodPosition = () => {};

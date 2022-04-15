@@ -79,6 +79,7 @@ window.addEventListener(
 
     // now I will create a function that will update the board and the HTML is going to draw
     reformToUpdate();
+    // once page is refreshed the food will be located in a different position each and every time.
     yummyFoodPosition();
   },
   false

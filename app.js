@@ -133,4 +133,7 @@ const yummyFoodPosition = () => {
   // setting the yumyum x to methods of Math.floor() and Math.random.
   // to randomise the x coordinates. times its coloumns and the sizing of the block.
   yumYumX = Math.floor(Math.random() * boardColumns) * blockSizing;
+  // creating a similar line of code for the y coordinate for the food.
+  // however multiplying the rows instead.
+  foodYumY = Math.floor(Math.random() * boardRows) * blockSizing;
 };

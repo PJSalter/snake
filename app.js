@@ -58,9 +58,9 @@ let xCorSnake = blockSizing * 7;
 let yCorSnake = blockSizing * 7;
 
 // x and y coordinates for creating the food, similar to creating the snake head.
-let yumYumX;
+let yumYumX = blockSizing * 12;
 // y coordinate of food
-let foodYumY;
+let foodYumY = blockSizing * 12;
 
 // A function to randomise the food in x and y coordinates.
 // placing the food in any loacation.

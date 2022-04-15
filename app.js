@@ -58,9 +58,11 @@ let xCorSnake = blockSizing * 7;
 let yCorSnake = blockSizing * 7;
 
 // x and y coordinates for creating the food, similar to creating the snake head.
-let yumYumX = blockSizing * 12;
+let yumYumX;
+//let yumYumX = blockSizing * 12; removing this because it doesn't need to be initialised anymore.
 // y coordinate of food
-let foodYumY = blockSizing * 12;
+//let foodYumY = blockSizing * 12; removing this because it doesn't need to be initialised anymore.
+let foodYumY;
 
 // so when the page loads then I will create an event handler which will load up the game board this will equal the function.
 window.addEventListener(

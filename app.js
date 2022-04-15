@@ -62,6 +62,20 @@ let yumYumX;
 // y coordinate of food
 let foodYumY;
 
+// A function to randomise the food in x and y coordinates.
+// placing the food in any loacation.
+
+const yummyFoodPosition = () => {
+  // Math.random() method brings up a number between 0-1 and then multiplying this by the number of coloumns and rows from 0-19.9999 then multiplying by the blocksizing which is 25.
+  // Math.floor() method brings its to the highest or lowest whole integer place.
+  // setting the yumyum x to methods of Math.floor() and Math.random.
+  // to randomise the x coordinates. times its coloumns and the sizing of the block.
+  yumYumX = Math.floor(Math.random() * boardColumns) * blockSizing;
+  // creating a similar line of code for the y coordinate for the food.
+  // however multiplying the rows instead.
+  foodYumY = Math.floor(Math.random() * boardRows) * blockSizing;
+};
+
 // so when the page loads then I will create an event handler which will load up the game board this will equal the function.
 window.addEventListener(
   "DOMContentLoaded",
@@ -126,18 +140,4 @@ const reformToUpdate = () => {
   displayBoardEffect.fillStyle = snakeFoodMix;
 
   displayBoardEffect.fillRect(yumYumX, foodYumY, blockSizing, blockSizing);
-};
-
-// A function to randomise the food in x and y coordinates.
-// placing the food in any loacation.
-
-const yummyFoodPosition = () => {
-  // Math.random() method brings up a number between 0-1 and then multiplying this by the number of coloumns and rows from 0-19.9999 then multiplying by the blocksizing which is 25.
-  // Math.floor() method brings its to the highest or lowest whole integer place.
-  // setting the yumyum x to methods of Math.floor() and Math.random.
-  // to randomise the x coordinates. times its coloumns and the sizing of the block.
-  yumYumX = Math.floor(Math.random() * boardColumns) * blockSizing;
-  // creating a similar line of code for the y coordinate for the food.
-  // however multiplying the rows instead.
-  foodYumY = Math.floor(Math.random() * boardRows) * blockSizing;
 };

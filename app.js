@@ -57,6 +57,9 @@ let xCorSnake = blockSizing * 7;
 // y coordinate
 let yCorSnake = blockSizing * 7;
 
+let slitherPaceX = 0;
+let slitherPaceY = 0;
+
 // x and y coordinates for creating the food, similar to creating the snake head.
 // let yumYumX = blockSizing * 12;
 // // y coordinate of food
@@ -137,10 +140,24 @@ const reformToUpdate = () => {
 };
 
 // creating a function to make the snake move.
-const moveThatSnake = () => {
+// this function will pass on a key event
+const moveThatSnake = (event) => {
   // the key up will wait for the user to press on an arrow key.
   // up, down, left or right.
   // soon as the user lets go of the key then it will actiavte this function to move the direction.
+  if (event.code == "ArrowUp") {
+    slitherPaceX = 0;
+    slitherPaceY = -1;
+  } else if (event.code == "ArrowDown") {
+    slitherPaceX = 0;
+    slitherPaceY = 1;
+  } else if (event.code == "ArrowLeft") {
+    slitherPaceX = -1;
+    slitherPaceY = 0;
+  } else if (event.code == "ArrowRight") {
+    slitherPaceX = 1;
+    slitherPaceY = 0;
+  }
 };
 
 // A function to randomise the food in x and y coordinates.

@@ -136,6 +136,9 @@ const reformToUpdate = () => {
   displayBoardEffect.fillRect(yumYumX, foodYumY, blockSizing, blockSizing);
 };
 
+// creating a function to make the snake move.
+const moveThatSnake = () => {};
+
 // A function to randomise the food in x and y coordinates.
 // placing the food in any loacation.
 const yummyFoodPosition = () => {

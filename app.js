@@ -91,7 +91,7 @@ window.addEventListener(
     document.addEventListener("keyup", moveThatSnake);
 
     // now I will create a function that will update the board and the HTML is going to draw
-    reformToUpdate();
+    setInterval(reformToUpdate, 1000 / 10); // this means it will move per 100 milliseconds at speed.
   },
   false
 );

@@ -137,7 +137,11 @@ const reformToUpdate = () => {
 };
 
 // creating a function to make the snake move.
-const moveThatSnake = () => {};
+const moveThatSnake = () => {
+  // the key up will wait for the user to press on an arrow key.
+  // up, down, left or right.
+  // soon as the user lets go of the key then it will actiavte this function to move the direction.
+};
 
 // A function to randomise the food in x and y coordinates.
 // placing the food in any loacation.

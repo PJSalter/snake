@@ -123,6 +123,9 @@ const reformToUpdate = () => {
   at (x, y) and whose size is specified by width and height. The fill style 
   is determined by the current fillStyle attribute.
   */
+  // this will make it move one square at a time.
+  xCorSnake += slitherPaceX * blockSizing;
+  yCorSnake += slitherPaceY * blockSizing;
   // x and y coordinates, also the width and the height.
   displayBoardEffect.fillRect(xCorSnake, yCorSnake, blockSizing, blockSizing);
   // the snake is on coordinates 7 by 7 within the block.

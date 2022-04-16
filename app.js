@@ -57,6 +57,9 @@ let xCorSnake = blockSizing * 7;
 // y coordinate
 let yCorSnake = blockSizing * 7;
 
+let slitherPaceX = 0;
+let slitherPaceY = 0;
+
 // x and y coordinates for creating the food, similar to creating the snake head.
 // let yumYumX = blockSizing * 12;
 // // y coordinate of food
@@ -82,6 +85,10 @@ window.addEventListener(
 
     // once page is refreshed the food will be located in a different position each and every time.
     yummyFoodPosition();
+
+    // now I am going to make the snake move by creating an event handler for keyup on move on activation.
+    // its going to activate a function called moveThatSnake
+    document.addEventListener("keyup", moveThatSnake);
 
     // now I will create a function that will update the board and the HTML is going to draw
     reformToUpdate();
@@ -116,6 +123,9 @@ const reformToUpdate = () => {
   at (x, y) and whose size is specified by width and height. The fill style 
   is determined by the current fillStyle attribute.
   */
+  // this will make it move one square at a time.
+  xCorSnake += slitherPaceX * blockSizing;
+  yCorSnake += slitherPaceY * blockSizing;
   // x and y coordinates, also the width and the height.
   displayBoardEffect.fillRect(xCorSnake, yCorSnake, blockSizing, blockSizing);
   // the snake is on coordinates 7 by 7 within the block.
@@ -130,6 +140,27 @@ const reformToUpdate = () => {
   displayBoardEffect.fillStyle = snakeFoodMix;
 
   displayBoardEffect.fillRect(yumYumX, foodYumY, blockSizing, blockSizing);
+};
+
+// creating a function to make the snake move.
+// this function will pass on a key event
+const moveThatSnake = (event) => {
+  // the key up will wait for the user to press on an arrow key.
+  // up, down, left or right.
+  // soon as the user lets go of the key then it will actiavte this function to move the direction.
+  if (event.code == "ArrowUp") {
+    slitherPaceX = 0;
+    slitherPaceY = -1;
+  } else if (event.code == "ArrowDown") {
+    slitherPaceX = 0;
+    slitherPaceY = 1;
+  } else if (event.code == "ArrowLeft") {
+    slitherPaceX = -1;
+    slitherPaceY = 0;
+  } else if (event.code == "ArrowRight") {
+    slitherPaceX = 1;
+    slitherPaceY = 0;
+  }
 };
 
 // A function to randomise the food in x and y coordinates.

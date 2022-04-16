@@ -85,6 +85,7 @@ window.addEventListener(
 
     // now I am going to make the snake move by creating an event handler for keyup on move on activation.
     // its going to activate a function called moveThatSnake
+    document.addEventListener("keyup", moveThatSnake);
 
     // now I will create a function that will update the board and the HTML is going to draw
     reformToUpdate();

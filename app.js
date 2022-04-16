@@ -83,6 +83,9 @@ window.addEventListener(
     // once page is refreshed the food will be located in a different position each and every time.
     yummyFoodPosition();
 
+    // now I am going to make the snake move by creating an event handler for keyup on move on activation.
+    // its going to activate a function called moveThatSnake
+
     // now I will create a function that will update the board and the HTML is going to draw
     reformToUpdate();
   },

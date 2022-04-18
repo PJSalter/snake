@@ -155,7 +155,7 @@ const moveThatSnake = (event) => {
   // the key up will wait for the user to press on an arrow key.
   // up, down, left or right.
   // soon as the user lets go of the key then it will actiavte this function to move the direction.
-  if (event.code == "ArrowUp") {
+  if (event.code == "ArrowUp" && slitherPaceY != 1) {
     slitherPaceX = 0;
     slitherPaceY = -1;
   } else if (event.code == "ArrowDown") {

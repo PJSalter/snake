@@ -121,6 +121,13 @@ const reformToUpdate = () => {
 
   displayBoardEffect.fillRect(yumYumX, foodYumY, blockSizing, blockSizing);
 
+  // to check if the snake eats the food.
+  // x cor for snake equals food cor x and y coe snake equals food cor y, then simply eat that food hungry snake.
+  if (xCorSnake == yumYumX && yCorSnake == foodYumY) {
+    // then eat that yummy food snake.
+    yummyFoodPosition();
+  }
+
   // creating the colour of the snake. with a dark pastel green hex code.
   // and using a neon pastel pink also to trend with a fade.
   // styling in JavaScript of linear Gradient for the beginning snake head

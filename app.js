@@ -110,6 +110,24 @@ const reformToUpdate = () => {
     boardForTheSnake.height
   );
 
+  // snake food styling.
+  // linear gradient styling for food using two different colours.
+  let snakeFoodMix = displayBoardEffect.createLinearGradient(85, 5, 20, 65);
+  snakeFoodMix.addColorStop(0, "#035bff");
+  snakeFoodMix.addColorStop(1, "#FFFF00");
+
+  // fill the style with the linear gradient to make the food look yummy.
+  displayBoardEffect.fillStyle = snakeFoodMix;
+
+  displayBoardEffect.fillRect(yumYumX, foodYumY, blockSizing, blockSizing);
+
+  // to check if the snake eats the food.
+  // x cor for snake equals food cor x and y coe snake equals food cor y, then simply eat that food hungry snake.
+  if (xCorSnake == yumYumX && yCorSnake == foodYumY) {
+    // then eat that yummy food snake.
+    yummyFoodPosition();
+  }
+
   // creating the colour of the snake. with a dark pastel green hex code.
   // and using a neon pastel pink also to trend with a fade.
   // styling in JavaScript of linear Gradient for the beginning snake head
@@ -129,17 +147,6 @@ const reformToUpdate = () => {
   // x and y coordinates, also the width and the height.
   displayBoardEffect.fillRect(xCorSnake, yCorSnake, blockSizing, blockSizing);
   // the snake is on coordinates 7 by 7 within the block.
-
-  // snake food styling.
-  // linear gradient styling for food using two different colours.
-  let snakeFoodMix = displayBoardEffect.createLinearGradient(85, 5, 20, 65);
-  snakeFoodMix.addColorStop(0, "#035bff");
-  snakeFoodMix.addColorStop(1, "#FFFF00");
-
-  // fill the style with the linear gradient to make the food look yummy.
-  displayBoardEffect.fillStyle = snakeFoodMix;
-
-  displayBoardEffect.fillRect(yumYumX, foodYumY, blockSizing, blockSizing);
 };
 
 // creating a function to make the snake move.
@@ -148,16 +155,16 @@ const moveThatSnake = (event) => {
   // the key up will wait for the user to press on an arrow key.
   // up, down, left or right.
   // soon as the user lets go of the key then it will actiavte this function to move the direction.
-  if (event.code == "ArrowUp") {
+  if (event.code == "ArrowUp" && slitherPaceY != 1) {
     slitherPaceX = 0;
     slitherPaceY = -1;
-  } else if (event.code == "ArrowDown") {
+  } else if (event.code == "ArrowDown" && slitherPaceY != -1) {
     slitherPaceX = 0;
     slitherPaceY = 1;
-  } else if (event.code == "ArrowLeft") {
+  } else if (event.code == "ArrowLeft" && slitherPaceY != 1) {
     slitherPaceX = -1;
     slitherPaceY = 0;
-  } else if (event.code == "ArrowRight") {
+  } else if (event.code == "ArrowRight" && slitherPaceY != -1) {
     slitherPaceX = 1;
     slitherPaceY = 0;
   }

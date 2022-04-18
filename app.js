@@ -110,6 +110,17 @@ const reformToUpdate = () => {
     boardForTheSnake.height
   );
 
+  // snake food styling.
+  // linear gradient styling for food using two different colours.
+  let snakeFoodMix = displayBoardEffect.createLinearGradient(85, 5, 20, 65);
+  snakeFoodMix.addColorStop(0, "#035bff");
+  snakeFoodMix.addColorStop(1, "#FFFF00");
+
+  // fill the style with the linear gradient to make the food look yummy.
+  displayBoardEffect.fillStyle = snakeFoodMix;
+
+  displayBoardEffect.fillRect(yumYumX, foodYumY, blockSizing, blockSizing);
+
   // creating the colour of the snake. with a dark pastel green hex code.
   // and using a neon pastel pink also to trend with a fade.
   // styling in JavaScript of linear Gradient for the beginning snake head
@@ -129,17 +140,6 @@ const reformToUpdate = () => {
   // x and y coordinates, also the width and the height.
   displayBoardEffect.fillRect(xCorSnake, yCorSnake, blockSizing, blockSizing);
   // the snake is on coordinates 7 by 7 within the block.
-
-  // snake food styling.
-  // linear gradient styling for food using two different colours.
-  let snakeFoodMix = displayBoardEffect.createLinearGradient(85, 5, 20, 65);
-  snakeFoodMix.addColorStop(0, "#035bff");
-  snakeFoodMix.addColorStop(1, "#FFFF00");
-
-  // fill the style with the linear gradient to make the food look yummy.
-  displayBoardEffect.fillStyle = snakeFoodMix;
-
-  displayBoardEffect.fillRect(yumYumX, foodYumY, blockSizing, blockSizing);
 };
 
 // creating a function to make the snake move.

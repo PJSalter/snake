@@ -164,7 +164,7 @@ const moveThatSnake = (event) => {
   } else if (event.code == "ArrowLeft" && slitherPaceY != 1) {
     slitherPaceX = -1;
     slitherPaceY = 0;
-  } else if (event.code == "ArrowRight") {
+  } else if (event.code == "ArrowRight" && slitherPaceY != -1) {
     slitherPaceX = 1;
     slitherPaceY = 0;
   }

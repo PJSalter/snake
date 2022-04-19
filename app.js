@@ -141,6 +141,10 @@ const reformToUpdate = () => {
     mySnakeGrowth[i] = mySnakeGrowth[i - 1];
     // I need the tail to gain the past x and y coordinates.
   }
+  // so if there are body parts in snake array.
+  // finding the length.
+  if (mySnakeGrowth.length) {
+  }
 
   // creating the colour of the snake. with a dark pastel green hex code.
   // and using a neon pastel pink also to trend with a fade.

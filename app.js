@@ -60,6 +60,10 @@ let yCorSnake = blockSizing * 7;
 let slitherPaceX = 0;
 let slitherPaceY = 0;
 
+// the snakes body growth will appear as an empty array at first.
+
+let mySnakeGrowth = [];
+
 // x and y coordinates for creating the food, similar to creating the snake head.
 // let yumYumX = blockSizing * 12;
 // // y coordinate of food

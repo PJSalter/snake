@@ -61,7 +61,7 @@ let slitherPaceX = 0;
 let slitherPaceY = 0;
 
 // the snakes body growth will appear as an empty array at first.
-
+// there will be multiple segments for x and y as the body grows larger.
 let mySnakeGrowth = [];
 
 // x and y coordinates for creating the food, similar to creating the snake head.
@@ -128,6 +128,8 @@ const reformToUpdate = () => {
   // to check if the snake eats the food.
   // x cor for snake equals food cor x and y coe snake equals food cor y, then simply eat that food hungry snake.
   if (xCorSnake == yumYumX && yCorSnake == foodYumY) {
+    // now its going to grow the snake in length from where the food location was eaten.
+
     // then eat that yummy food snake.
     yummyFoodPosition();
   }

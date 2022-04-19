@@ -134,6 +134,14 @@ const reformToUpdate = () => {
     yummyFoodPosition();
   }
 
+  // moving the growth of the snake body.
+  // decrement for loop.
+  for (let i = mySnakeGrowth.length - 1; i > 0; i--) {
+    // starting at the very end of the snake body, the tail of the snake.
+    mySnakeGrowth[i] = mySnakeGrowth[i - 1];
+    // I need the tail to gain the past x and y coordinates.
+  }
+
   // creating the colour of the snake. with a dark pastel green hex code.
   // and using a neon pastel pink also to trend with a fade.
   // styling in JavaScript of linear Gradient for the beginning snake head

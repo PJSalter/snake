@@ -95,7 +95,7 @@ window.addEventListener(
     document.addEventListener("keyup", moveThatSnake);
 
     // now I will create a function that will update the board and the HTML is going to draw
-    setInterval(reformToUpdate, 1000 / 10); // this means it will move per 100 milliseconds at speed.
+    setInterval(reformToUpdate, 2000 / 10);
   },
   false
 );
@@ -144,6 +144,8 @@ const reformToUpdate = () => {
   // so if there are body parts in snake array.
   // finding the length.
   if (mySnakeGrowth.length) {
+    // then I will set the body of my snake to the snaked head.
+    mySnakeGrowth[0] = [xCorSnake, yCorSnake];
   }
 
   // creating the colour of the snake. with a dark pastel green hex code.

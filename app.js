@@ -129,7 +129,7 @@ const reformToUpdate = () => {
   // x cor for snake equals food cor x and y coe snake equals food cor y, then simply eat that food hungry snake.
   if (xCorSnake == yumYumX && yCorSnake == foodYumY) {
     // now its going to grow the snake in length from where the food location was eaten.
-
+    mySnakeGrowth.push([yumYumX, foodYumY]);
     // then eat that yummy food snake.
     yummyFoodPosition();
   }

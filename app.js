@@ -153,6 +153,16 @@ const reformToUpdate = () => {
   // x and y coordinates, also the width and the height.
   displayBoardEffect.fillRect(xCorSnake, yCorSnake, blockSizing, blockSizing);
   // the snake is on coordinates 7 by 7 within the block.
+
+  // now I will draw the different segments for each growth of the snake.
+  for (let i = 0; i < mySnakeGrowth.length; i++) {
+    displayBoardEffect.fillRect(
+      mySnakeGrowth[i][0],
+      mySnakeGrowth[i][1],
+      blockSizing,
+      blockSizing
+    );
+  }
 };
 
 // creating a function to make the snake move.

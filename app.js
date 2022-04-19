@@ -60,6 +60,10 @@ let yCorSnake = blockSizing * 7;
 let slitherPaceX = 0;
 let slitherPaceY = 0;
 
+// the snakes body growth will appear as an empty array at first.
+// there will be multiple segments for x and y as the body grows larger.
+let mySnakeGrowth = [];
+
 // x and y coordinates for creating the food, similar to creating the snake head.
 // let yumYumX = blockSizing * 12;
 // // y coordinate of food
@@ -91,7 +95,7 @@ window.addEventListener(
     document.addEventListener("keyup", moveThatSnake);
 
     // now I will create a function that will update the board and the HTML is going to draw
-    setInterval(reformToUpdate, 1000 / 10); // this means it will move per 100 milliseconds at speed.
+    setInterval(reformToUpdate, 2000 / 10);
   },
   false
 );
@@ -124,8 +128,24 @@ const reformToUpdate = () => {
   // to check if the snake eats the food.
   // x cor for snake equals food cor x and y coe snake equals food cor y, then simply eat that food hungry snake.
   if (xCorSnake == yumYumX && yCorSnake == foodYumY) {
+    // now its going to grow the snake in length from where the food location was eaten.
+    mySnakeGrowth.push([yumYumX, foodYumY]);
     // then eat that yummy food snake.
     yummyFoodPosition();
+  }
+
+  // moving the growth of the snake body.
+  // decrement for loop.
+  for (let i = mySnakeGrowth.length - 1; i > 0; i--) {
+    // starting at the very end of the snake body, the tail of the snake.
+    mySnakeGrowth[i] = mySnakeGrowth[i - 1];
+    // I need the tail to gain the past x and y coordinates.
+  }
+  // so if there are body parts in snake array.
+  // finding the length.
+  if (mySnakeGrowth.length) {
+    // then I will set the body of my snake to the snaked head.
+    mySnakeGrowth[0] = [xCorSnake, yCorSnake];
   }
 
   // creating the colour of the snake. with a dark pastel green hex code.
@@ -147,6 +167,16 @@ const reformToUpdate = () => {
   // x and y coordinates, also the width and the height.
   displayBoardEffect.fillRect(xCorSnake, yCorSnake, blockSizing, blockSizing);
   // the snake is on coordinates 7 by 7 within the block.
+
+  // now I will draw the different segments for each growth of the snake.
+  for (let i = 0; i < mySnakeGrowth.length; i++) {
+    displayBoardEffect.fillRect(
+      mySnakeGrowth[i][0],
+      mySnakeGrowth[i][1],
+      blockSizing,
+      blockSizing
+    );
+  }
 };
 
 // creating a function to make the snake move.

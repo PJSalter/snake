@@ -2,6 +2,8 @@
 
 const snakeMoveThatLeft = document.querySelector("#leftMove");
 
+const rightOverThereSnake = document.querySelector("#rightMove");
+
 //creating coordinates for as an object that will define the length of the snake.
 // x and y coordinates.
 // creating the snake in middle of canvas.

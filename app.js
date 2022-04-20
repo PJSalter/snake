@@ -228,3 +228,5 @@ const yummyFoodPosition = () => {
 upThisWaySnake.addEventListener("click", snakeGoesUp);
 
 snakeMoveThatLeft.addEventListener("click", snakeGoesLeft);
+
+rightOverThereSnake.addEventListener("click", snakeGoesRight);

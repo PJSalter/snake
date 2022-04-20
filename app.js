@@ -104,6 +104,16 @@ window.addEventListener(
     // its going to activate a function called moveThatSnake
     document.addEventListener("keyup", moveThatSnake);
 
+    // event handlers for each clicked direction from button pad.
+
+    upThisWaySnake.addEventListener("click", snakeGoesUp);
+
+    snakeMoveThatLeft.addEventListener("click", snakeGoesLeft);
+
+    rightOverThereSnake.addEventListener("click", snakeGoesRight);
+
+    foodIsDown.addEventListener("click", snakeGoesDown);
+
     // now I will create a function that will update the board and the HTML is going to draw
     setInterval(reformToUpdate, 2000 / 10);
   },
@@ -223,12 +233,30 @@ const yummyFoodPosition = () => {
   foodYumY = Math.floor(Math.random() * boardRows) * blockSizing;
 };
 
-// event handlers for each clicked direction from button pad.
+// const snakeGoesUp = (e) => {
+//   if (e.code == "ArrowUp" && slitherPaceY != 1) {
+//     slitherPaceX = 0;
+//     slitherPaceY = -1;
+//   }
+// };
 
-upThisWaySnake.addEventListener("click", snakeGoesUp);
+// const snakeGoesLeft = (e) => {
+//   if (e.code == "ArrowLeft" && slitherPaceY != 1) {
+//     slitherPaceX = -1;
+//     slitherPaceY = 0;
+//   }
+// };
 
-snakeMoveThatLeft.addEventListener("click", snakeGoesLeft);
+// const snakeGoesRight = (e) => {
+//   if (e.code == "ArrowRight" && slitherPaceY != -1) {
+//     slitherPaceX = 1;
+//     slitherPaceY = 0;
+//   }
+// };
 
-rightOverThereSnake.addEventListener("click", snakeGoesRight);
-
-foodIsDown.addEventListener("click", snakeGoesDown);
+// const snakeGoesDown = (e) => {
+//   if (e.code == "ArrowDown" && slitherPaceY != -1) {
+//     slitherPaceX = 0;
+//     slitherPaceY = 1;
+//   }
+// };

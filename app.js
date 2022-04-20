@@ -1,3 +1,13 @@
+// query selectors to pick up the id attributes for each button on direction.
+
+const upThisWaySnake = document.querySelector("#upMove");
+
+const snakeMoveThatLeft = document.querySelector("#leftMove");
+
+const rightOverThereSnake = document.querySelector("#rightMove");
+
+const foodIsDown = document.querySelector("#downMove");
+
 //creating coordinates for as an object that will define the length of the snake.
 // x and y coordinates.
 // creating the snake in middle of canvas.
@@ -93,6 +103,16 @@ window.addEventListener(
     // now I am going to make the snake move by creating an event handler for keyup on move on activation.
     // its going to activate a function called moveThatSnake
     document.addEventListener("keyup", moveThatSnake);
+
+    // event handlers for each clicked direction from button pad.
+
+    upThisWaySnake.addEventListener("click", snakeGoesUp);
+
+    snakeMoveThatLeft.addEventListener("click", snakeGoesLeft);
+
+    rightOverThereSnake.addEventListener("click", snakeGoesRight);
+
+    foodIsDown.addEventListener("click", snakeGoesDown);
 
     // now I will create a function that will update the board and the HTML is going to draw
     setInterval(reformToUpdate, 2000 / 10);
@@ -212,3 +232,31 @@ const yummyFoodPosition = () => {
   // however multiplying the rows instead.
   foodYumY = Math.floor(Math.random() * boardRows) * blockSizing;
 };
+
+// const snakeGoesUp = (e) => {
+//   if (e.code == "ArrowUp" && slitherPaceY != 1) {
+//     slitherPaceX = 0;
+//     slitherPaceY = -1;
+//   }
+// };
+
+// const snakeGoesLeft = (e) => {
+//   if (e.code == "ArrowLeft" && slitherPaceY != 1) {
+//     slitherPaceX = -1;
+//     slitherPaceY = 0;
+//   }
+// };
+
+// const snakeGoesRight = (e) => {
+//   if (e.code == "ArrowRight" && slitherPaceY != -1) {
+//     slitherPaceX = 1;
+//     slitherPaceY = 0;
+//   }
+// };
+
+// const snakeGoesDown = (e) => {
+//   if (e.code == "ArrowDown" && slitherPaceY != -1) {
+//     slitherPaceX = 0;
+//     slitherPaceY = 1;
+//   }
+// };

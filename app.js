@@ -1,8 +1,12 @@
 // query selectors to pick up the id attributes for each button on direction.
 
+const upThisWaySnake = document.querySelector("#upMove");
+
 const snakeMoveThatLeft = document.querySelector("#leftMove");
 
 const rightOverThereSnake = document.querySelector("#rightMove");
+
+const foodIsDown = document.querySelector("#downMove");
 
 //creating coordinates for as an object that will define the length of the snake.
 // x and y coordinates.

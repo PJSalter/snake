@@ -1,3 +1,7 @@
+// query selectors to pick up the id attributes for each button on direction.
+
+const snakeMoveThatLeft = document.querySelector("#leftMove");
+
 //creating coordinates for as an object that will define the length of the snake.
 // x and y coordinates.
 // creating the snake in middle of canvas.
@@ -212,3 +216,5 @@ const yummyFoodPosition = () => {
   // however multiplying the rows instead.
   foodYumY = Math.floor(Math.random() * boardRows) * blockSizing;
 };
+
+// event handlers for each clicked direction from button pad.

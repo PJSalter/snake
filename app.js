@@ -226,3 +226,5 @@ const yummyFoodPosition = () => {
 // event handlers for each clicked direction from button pad.
 
 upThisWaySnake.addEventListener("click", snakeGoesUp);
+
+snakeMoveThatLeft.addEventListener("click", snakeGoesLeft);

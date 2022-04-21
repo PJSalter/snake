@@ -232,31 +232,3 @@ const yummyFoodPosition = () => {
   // however multiplying the rows instead.
   foodYumY = Math.floor(Math.random() * boardRows) * blockSizing;
 };
-
-// const snakeGoesUp = (e) => {
-//   if (e.code == "ArrowUp" && slitherPaceY != 1) {
-//     slitherPaceX = 0;
-//     slitherPaceY = -1;
-//   }
-// };
-
-// const snakeGoesLeft = (e) => {
-//   if (e.code == "ArrowLeft" && slitherPaceY != 1) {
-//     slitherPaceX = -1;
-//     slitherPaceY = 0;
-//   }
-// };
-
-// const snakeGoesRight = (e) => {
-//   if (e.code == "ArrowRight" && slitherPaceY != -1) {
-//     slitherPaceX = 1;
-//     slitherPaceY = 0;
-//   }
-// };
-
-// const snakeGoesDown = (e) => {
-//   if (e.code == "ArrowDown" && slitherPaceY != -1) {
-//     slitherPaceX = 0;
-//     slitherPaceY = 1;
-//   }
-// };

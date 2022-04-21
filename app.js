@@ -106,13 +106,13 @@ window.addEventListener(
 
     // event handlers for each clicked direction from button pad.
 
-    upThisWaySnake.addEventListener("click", snakeGoesUp);
+    // upThisWaySnake.addEventListener("click", snakeGoesUp);
 
-    snakeMoveThatLeft.addEventListener("click", snakeGoesLeft);
+    // snakeMoveThatLeft.addEventListener("click", snakeGoesLeft);
 
-    rightOverThereSnake.addEventListener("click", snakeGoesRight);
+    // rightOverThereSnake.addEventListener("click", snakeGoesRight);
 
-    foodIsDown.addEventListener("click", snakeGoesDown);
+    // foodIsDown.addEventListener("click", snakeGoesDown);
 
     // now I will create a function that will update the board and the HTML is going to draw
     setInterval(reformToUpdate, 2000 / 10);
